@@ -1,12 +1,9 @@
 import csv
-import json
 import datetime
 import calendar
 import shelve
 import io
 import time
-import cPickle as pickle
-import zipfile
 from math import atan2,pi,sqrt
 import sys
 reload(sys)
@@ -31,7 +28,6 @@ def impfunc(n):
 			s2=int(s[1][s[1].find(": ")+2:])
 		except IndexError:
 			s2=-1
-		print s1,s2
 	else:
 		s1="Grey"
 		s2=-1

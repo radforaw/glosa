@@ -128,3 +128,25 @@ def closething(point,double ang,data):
 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
 			return True
 	return False
+
+def pointlinedistance(line,point):
+Cdef double x1,y1,x2,y2,x3,y3,u
+	x1=line[0][0]
+	y1=line[0][1]
+	x2=line[1][0]
+	y2=line[1][1]
+	x3=point[0]
+	y3=point[1]
+	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+	if u<0.0001 or u>1:
+		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):
+			ix=x1
+			iy=y1
+		else:
+			ix=x2
+			iy=y2
+	else:
+		ix = x1 + u * (x2 - x1)
+		iy = y1 + u * (y2 - y1)
+	d=((ix-x3)**2)+((iy-y3)**2)
+	return (ix,iy),d

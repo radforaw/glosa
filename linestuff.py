@@ -76,6 +76,10 @@ def routecalc(filename='route.py',dist=10):
 	result=plinesplit(points,dist)
 	return result
 	
+
+	
+	
+	
 '''
 
 points=[[(n[0]-mx),(n[1]-my)] for n in points]

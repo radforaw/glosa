@@ -1107,10 +1107,12 @@ static const char __pyx_k_N[] = "N";
 static const char __pyx_k_V[] = "V";
 static const char __pyx_k_a[] = "a";
 static const char __pyx_k_b[] = "b";
+static const char __pyx_k_d[] = "d";
 static const char __pyx_k_n[] = "n";
 static const char __pyx_k_p[] = "p";
 static const char __pyx_k_r[] = "r";
 static const char __pyx_k_s[] = "s";
+static const char __pyx_k_u[] = "u";
 static const char __pyx_k_x[] = "x";
 static const char __pyx_k_y[] = "y";
 static const char __pyx_k_E0[] = "E0";
@@ -1125,6 +1127,8 @@ static const char __pyx_k_N0[] = "N0";
 static const char __pyx_k_VI[] = "VI";
 static const char __pyx_k_aa[] = "aa";
 static const char __pyx_k_e2[] = "e2";
+static const char __pyx_k_ix[] = "ix";
+static const char __pyx_k_iy[] = "iy";
 static const char __pyx_k_nu[] = "nu";
 static const char __pyx_k_pi[] = "pi";
 static const char __pyx_k_rx[] = "rx";
@@ -1133,6 +1137,12 @@ static const char __pyx_k_rz[] = "rz";
 static const char __pyx_k_tx[] = "tx";
 static const char __pyx_k_ty[] = "ty";
 static const char __pyx_k_tz[] = "tz";
+static const char __pyx_k_x1[] = "x1";
+static const char __pyx_k_x2[] = "x2";
+static const char __pyx_k_x3[] = "x3";
+static const char __pyx_k_y1[] = "y1";
+static const char __pyx_k_y2[] = "y2";
+static const char __pyx_k_y3[] = "y3";
 static const char __pyx_k_III[] = "III";
 static const char __pyx_k_a_1[] = "a_1";
 static const char __pyx_k_ang[] = "ang";
@@ -1160,6 +1170,7 @@ static const char __pyx_k_dist[] = "dist";
 static const char __pyx_k_e2_1[] = "e2_1";
 static const char __pyx_k_eta2[] = "eta2";
 static const char __pyx_k_lat0[] = "lat0";
+static const char __pyx_k_line[] = "line";
 static const char __pyx_k_lon0[] = "lon0";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_math[] = "math";
@@ -1177,6 +1188,7 @@ static const char __pyx_k_latold[] = "latold";
 static const char __pyx_k_xrange[] = "xrange";
 static const char __pyx_k_closething[] = "closething";
 static const char __pyx_k_WGS84toOSGB36[] = "WGS84toOSGB36";
+static const char __pyx_k_pointlinedistance[] = "pointlinedistance";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_WGS84toOSGB36_line_4[] = "WGS84toOSGB36 (line 4)";
 static const char __pyx_k_geometryfunctions_pyx[] = "geometryfunctions.pyx";
@@ -1214,6 +1226,7 @@ static PyObject *__pyx_n_s_b_1;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_closething;
 static PyObject *__pyx_n_s_cos;
+static PyObject *__pyx_n_s_d;
 static PyObject *__pyx_n_s_data;
 static PyObject *__pyx_n_s_dist;
 static PyObject *__pyx_n_s_e2;
@@ -1222,10 +1235,13 @@ static PyObject *__pyx_n_s_eta2;
 static PyObject *__pyx_n_s_geometryfunc_geometryfunctions;
 static PyObject *__pyx_kp_s_geometryfunctions_pyx;
 static PyObject *__pyx_n_s_import;
+static PyObject *__pyx_n_s_ix;
+static PyObject *__pyx_n_s_iy;
 static PyObject *__pyx_n_s_lat;
 static PyObject *__pyx_n_s_lat0;
 static PyObject *__pyx_n_s_lat_1;
 static PyObject *__pyx_n_s_latold;
+static PyObject *__pyx_n_s_line;
 static PyObject *__pyx_n_s_lon;
 static PyObject *__pyx_n_s_lon0;
 static PyObject *__pyx_n_s_lon_1;
@@ -1238,6 +1254,7 @@ static PyObject *__pyx_n_s_nu_1;
 static PyObject *__pyx_n_s_p;
 static PyObject *__pyx_n_s_pi;
 static PyObject *__pyx_n_s_point;
+static PyObject *__pyx_n_s_pointlinedistance;
 static PyObject *__pyx_n_s_r;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_res;
@@ -1256,11 +1273,18 @@ static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_tx;
 static PyObject *__pyx_n_s_ty;
 static PyObject *__pyx_n_s_tz;
+static PyObject *__pyx_n_s_u;
 static PyObject *__pyx_n_s_x;
+static PyObject *__pyx_n_s_x1;
+static PyObject *__pyx_n_s_x2;
+static PyObject *__pyx_n_s_x3;
 static PyObject *__pyx_n_s_x_1;
 static PyObject *__pyx_n_s_x_2;
 static PyObject *__pyx_n_s_xrange;
 static PyObject *__pyx_n_s_y;
+static PyObject *__pyx_n_s_y1;
+static PyObject *__pyx_n_s_y2;
+static PyObject *__pyx_n_s_y3;
 static PyObject *__pyx_n_s_y_1;
 static PyObject *__pyx_n_s_y_2;
 static PyObject *__pyx_n_s_z_1;
@@ -1269,6 +1293,7 @@ static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_WGS84toOSGB36(CYTHO
 static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_2dist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
 static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_4angle(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
 static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_6closething(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_point, double __pyx_v_ang, PyObject *__pyx_v_data); /* proto */
+static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_8pointlinedistance(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_line, PyObject *__pyx_v_point); /* proto */
 static PyObject *__pyx_float_neg_1_5;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
@@ -1282,19 +1307,21 @@ static PyObject *__pyx_int_45;
 static PyObject *__pyx_int_49;
 static PyObject *__pyx_int_58;
 static PyObject *__pyx_int_61;
+static PyObject *__pyx_int_100;
 static PyObject *__pyx_int_120;
 static PyObject *__pyx_int_180;
 static PyObject *__pyx_int_720;
-static PyObject *__pyx_int_2000;
 static PyObject *__pyx_int_neg_2;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__7;
+static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_codeobj__2;
 static PyObject *__pyx_codeobj__4;
 static PyObject *__pyx_codeobj__6;
 static PyObject *__pyx_codeobj__8;
+static PyObject *__pyx_codeobj__10;
 /* Late includes */
 
 /* "geometryfunc/geometryfunctions.pyx":4
@@ -4901,226 +4928,259 @@ static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_6closething(CYTHON_
   PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
-  int __pyx_t_9;
+  PyObject *__pyx_t_9 = NULL;
   int __pyx_t_10;
   int __pyx_t_11;
-  PyObject *__pyx_t_12 = NULL;
+  int __pyx_t_12;
   __Pyx_RefNannySetupContext("closething", 0);
 
-  /* "geometryfunc/geometryfunctions.pyx":125
- * 	data = list of points showing the line that is being compared.
- * 	'''
- * 	res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])             # <<<<<<<<<<<<<<
- * 	if res[0]<2000 and res[1]<len(data): #close but not last point
+  /* "geometryfunc/geometryfunctions.pyx":127
+ * 	#res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])
+ * 
+ * 	res=min([[pointlinedistance((data[0],data[1]), point)[1],n] for n in xrange(len(data)-1)])             # <<<<<<<<<<<<<<
+ * 	if res[0]<100 and res[1]<len(data): #close but not last point
  * 		aa=angle(data[res[1]],data[res[1]+1])
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_2 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 127, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_2 - 1);
   __pyx_t_2 = __pyx_t_3;
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_2; __pyx_t_4+=1) {
     __pyx_v_n = __pyx_t_4;
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_point, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_data, __pyx_v_n, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_pointlinedistance); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 127, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_GetItemInt(__pyx_t_6, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = PyNumber_Subtract(__pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Power(__pyx_t_6, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_point, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_data, __pyx_v_n, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 127, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyNumber_Subtract(__pyx_t_6, __pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyNumber_Power(__pyx_t_5, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyNumber_Add(__pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyInt_FromSsize_t(__pyx_v_n); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_7 = PyList_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 125, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_GIVEREF(__pyx_t_5);
-    PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_5);
+    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_GIVEREF(__pyx_t_7);
+    PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_8);
-    PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_8);
-    __pyx_t_5 = 0;
+    PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_8);
+    __pyx_t_7 = 0;
     __pyx_t_8 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_8 = NULL;
+    __pyx_t_10 = 0;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
+      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_6);
+      if (likely(__pyx_t_8)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_8);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_6, function);
+        __pyx_t_10 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_6)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_t_9, __pyx_v_point};
+      __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_t_9, __pyx_v_point};
+      __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      if (__pyx_t_8) {
+        __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_8); __pyx_t_8 = NULL;
+      }
+      __Pyx_GIVEREF(__pyx_t_9);
+      PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_10, __pyx_t_9);
+      __Pyx_INCREF(__pyx_v_point);
+      __Pyx_GIVEREF(__pyx_v_point);
+      PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_10, __pyx_v_point);
+      __pyx_t_9 = 0;
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_7, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = PyInt_FromSsize_t(__pyx_v_n); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_7 = PyList_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_GIVEREF(__pyx_t_6);
+    PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_6);
+    __Pyx_GIVEREF(__pyx_t_5);
+    PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_5);
+    __pyx_t_6 = 0;
+    __pyx_t_5 = 0;
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 127, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_min, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_min, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_res = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "geometryfunc/geometryfunctions.pyx":126
- * 	'''
- * 	res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])
- * 	if res[0]<2000 and res[1]<len(data): #close but not last point             # <<<<<<<<<<<<<<
+  /* "geometryfunc/geometryfunctions.pyx":128
+ * 
+ * 	res=min([[pointlinedistance((data[0],data[1]), point)[1],n] for n in xrange(len(data)-1)])
+ * 	if res[0]<100 and res[1]<len(data): #close but not last point             # <<<<<<<<<<<<<<
  * 		aa=angle(data[res[1]],data[res[1]+1])
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
  */
-  __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_res, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_res, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_7, __pyx_int_2000, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_7, __pyx_int_100, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__pyx_t_10) {
+  if (__pyx_t_12) {
   } else {
-    __pyx_t_9 = __pyx_t_10;
+    __pyx_t_11 = __pyx_t_12;
     goto __pyx_L6_bool_binop_done;
   }
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_3 == ((Py_ssize_t)-1))) __PYX_ERR(0, 126, __pyx_L1_error)
-  __pyx_t_7 = PyInt_FromSsize_t(__pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_3 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_3 == ((Py_ssize_t)-1))) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_7 = PyInt_FromSsize_t(__pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyObject_RichCompare(__pyx_t_1, __pyx_t_7, Py_LT); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_7, Py_LT); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 126, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_9 = __pyx_t_10;
+  __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_11 = __pyx_t_12;
   __pyx_L6_bool_binop_done:;
-  if (__pyx_t_9) {
+  if (__pyx_t_11) {
 
-    /* "geometryfunc/geometryfunctions.pyx":127
- * 	res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])
- * 	if res[0]<2000 and res[1]<len(data): #close but not last point
+    /* "geometryfunc/geometryfunctions.pyx":129
+ * 	res=min([[pointlinedistance((data[0],data[1]), point)[1],n] for n in xrange(len(data)-1)])
+ * 	if res[0]<100 and res[1]<len(data): #close but not last point
  * 		aa=angle(data[res[1]],data[res[1]+1])             # <<<<<<<<<<<<<<
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
  * 			return True
  */
-    __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_angle); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_angle); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = NULL;
-    __pyx_t_11 = 0;
+    __pyx_t_9 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 129, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __pyx_t_9 = NULL;
+    __pyx_t_10 = 0;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_7))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_7);
-      if (likely(__pyx_t_6)) {
+      __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_7);
+      if (likely(__pyx_t_9)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-        __Pyx_INCREF(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_9);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_7, function);
-        __pyx_t_11 = 1;
+        __pyx_t_10 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_7)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_5, __pyx_t_1};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 127, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_t_6, __pyx_t_1};
+      __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 129, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_5, __pyx_t_1};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 127, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_t_6, __pyx_t_1};
+      __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 129, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else
     #endif
     {
-      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 127, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      if (__pyx_t_6) {
-        __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_6); __pyx_t_6 = NULL;
-      }
-      __Pyx_GIVEREF(__pyx_t_5);
-      PyTuple_SET_ITEM(__pyx_t_12, 0+__pyx_t_11, __pyx_t_5);
-      __Pyx_GIVEREF(__pyx_t_1);
-      PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_t_1);
-      __pyx_t_5 = 0;
-      __pyx_t_1 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_12, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 129, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+      if (__pyx_t_9) {
+        __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_9); __pyx_t_9 = NULL;
+      }
+      __Pyx_GIVEREF(__pyx_t_6);
+      PyTuple_SET_ITEM(__pyx_t_8, 0+__pyx_t_10, __pyx_t_6);
+      __Pyx_GIVEREF(__pyx_t_1);
+      PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_10, __pyx_t_1);
+      __pyx_t_6 = 0;
+      __pyx_t_1 = 0;
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_8, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 129, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_v_aa = __pyx_t_8;
-    __pyx_t_8 = 0;
+    __pyx_v_aa = __pyx_t_5;
+    __pyx_t_5 = 0;
 
-    /* "geometryfunc/geometryfunctions.pyx":128
- * 	if res[0]<2000 and res[1]<len(data): #close but not last point
+    /* "geometryfunc/geometryfunctions.pyx":130
+ * 	if res[0]<100 and res[1]<len(data): #close but not last point
  * 		aa=angle(data[res[1]],data[res[1]+1])
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected             # <<<<<<<<<<<<<<
  * 			return True
  * 	return False
  */
-    __pyx_t_8 = PyFloat_FromDouble(__pyx_v_ang); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_7 = PyNumber_Subtract(__pyx_t_8, __pyx_v_aa); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_ang); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_7 = PyNumber_Subtract(__pyx_t_5, __pyx_v_aa); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = __Pyx_PyNumber_Absolute(__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = __Pyx_PyNumber_Absolute(__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyInt_SubtractObjC(__pyx_t_8, __pyx_int_180, 0xB4, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_SubtractObjC(__pyx_t_5, __pyx_int_180, 0xB4, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = __Pyx_PyNumber_Absolute(__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = __Pyx_PyNumber_Absolute(__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyInt_SubtractCObj(__pyx_int_180, __pyx_t_8, 0xB4, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_SubtractCObj(__pyx_int_180, __pyx_t_5, 0xB4, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyObject_RichCompare(__pyx_t_7, __pyx_int_45, Py_LT); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = PyObject_RichCompare(__pyx_t_7, __pyx_int_45, Py_LT); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (__pyx_t_9) {
+    __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 130, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (__pyx_t_11) {
 
-      /* "geometryfunc/geometryfunctions.pyx":129
+      /* "geometryfunc/geometryfunctions.pyx":131
  * 		aa=angle(data[res[1]],data[res[1]+1])
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
  * 			return True             # <<<<<<<<<<<<<<
  * 	return False
+ * 
  */
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(Py_True);
       __pyx_r = Py_True;
       goto __pyx_L0;
 
-      /* "geometryfunc/geometryfunctions.pyx":128
- * 	if res[0]<2000 and res[1]<len(data): #close but not last point
+      /* "geometryfunc/geometryfunctions.pyx":130
+ * 	if res[0]<100 and res[1]<len(data): #close but not last point
  * 		aa=angle(data[res[1]],data[res[1]+1])
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected             # <<<<<<<<<<<<<<
  * 			return True
@@ -5128,19 +5188,21 @@ static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_6closething(CYTHON_
  */
     }
 
-    /* "geometryfunc/geometryfunctions.pyx":126
- * 	'''
- * 	res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])
- * 	if res[0]<2000 and res[1]<len(data): #close but not last point             # <<<<<<<<<<<<<<
+    /* "geometryfunc/geometryfunctions.pyx":128
+ * 
+ * 	res=min([[pointlinedistance((data[0],data[1]), point)[1],n] for n in xrange(len(data)-1)])
+ * 	if res[0]<100 and res[1]<len(data): #close but not last point             # <<<<<<<<<<<<<<
  * 		aa=angle(data[res[1]],data[res[1]+1])
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
  */
   }
 
-  /* "geometryfunc/geometryfunctions.pyx":130
+  /* "geometryfunc/geometryfunctions.pyx":132
  * 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
  * 			return True
  * 	return False             # <<<<<<<<<<<<<<
+ * 
+ * def pointlinedistance(line,point):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(Py_False);
@@ -5162,12 +5224,378 @@ static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_6closething(CYTHON_
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_9);
   __Pyx_AddTraceback("geometryfunc.geometryfunctions.closething", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_res);
   __Pyx_XDECREF(__pyx_v_aa);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "geometryfunc/geometryfunctions.pyx":134
+ * 	return False
+ * 
+ * def pointlinedistance(line,point):             # <<<<<<<<<<<<<<
+ * 	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
+ * 	x1=line[0][0]
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_12geometryfunc_17geometryfunctions_9pointlinedistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_12geometryfunc_17geometryfunctions_9pointlinedistance = {"pointlinedistance", (PyCFunction)__pyx_pw_12geometryfunc_17geometryfunctions_9pointlinedistance, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12geometryfunc_17geometryfunctions_9pointlinedistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_line = 0;
+  PyObject *__pyx_v_point = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("pointlinedistance (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_line,&__pyx_n_s_point,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_line)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_point)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("pointlinedistance", 1, 2, 2, 1); __PYX_ERR(0, 134, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "pointlinedistance") < 0)) __PYX_ERR(0, 134, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_line = values[0];
+    __pyx_v_point = values[1];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("pointlinedistance", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 134, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("geometryfunc.geometryfunctions.pointlinedistance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_12geometryfunc_17geometryfunctions_8pointlinedistance(__pyx_self, __pyx_v_line, __pyx_v_point);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_12geometryfunc_17geometryfunctions_8pointlinedistance(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_line, PyObject *__pyx_v_point) {
+  double __pyx_v_x1;
+  double __pyx_v_y1;
+  double __pyx_v_x2;
+  double __pyx_v_y2;
+  double __pyx_v_x3;
+  double __pyx_v_y3;
+  double __pyx_v_u;
+  double __pyx_v_ix;
+  double __pyx_v_iy;
+  double __pyx_v_d;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  double __pyx_t_3;
+  double __pyx_t_4;
+  int __pyx_t_5;
+  int __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
+  __Pyx_RefNannySetupContext("pointlinedistance", 0);
+
+  /* "geometryfunc/geometryfunctions.pyx":136
+ * def pointlinedistance(line,point):
+ * 	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
+ * 	x1=line[0][0]             # <<<<<<<<<<<<<<
+ * 	y1=line[0][1]
+ * 	x2=line[1][0]
+ */
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_line, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_v_x1 = __pyx_t_3;
+
+  /* "geometryfunc/geometryfunctions.pyx":137
+ * 	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
+ * 	x1=line[0][0]
+ * 	y1=line[0][1]             # <<<<<<<<<<<<<<
+ * 	x2=line[1][0]
+ * 	y2=line[1][1]
+ */
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_line, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_y1 = __pyx_t_3;
+
+  /* "geometryfunc/geometryfunctions.pyx":138
+ * 	x1=line[0][0]
+ * 	y1=line[0][1]
+ * 	x2=line[1][0]             # <<<<<<<<<<<<<<
+ * 	y2=line[1][1]
+ * 	x3=point[0]
+ */
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_line, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_v_x2 = __pyx_t_3;
+
+  /* "geometryfunc/geometryfunctions.pyx":139
+ * 	y1=line[0][1]
+ * 	x2=line[1][0]
+ * 	y2=line[1][1]             # <<<<<<<<<<<<<<
+ * 	x3=point[0]
+ * 	y3=point[1]
+ */
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_line, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_y2 = __pyx_t_3;
+
+  /* "geometryfunc/geometryfunctions.pyx":140
+ * 	x2=line[1][0]
+ * 	y2=line[1][1]
+ * 	x3=point[0]             # <<<<<<<<<<<<<<
+ * 	y3=point[1]
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+ */
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_point, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_x3 = __pyx_t_3;
+
+  /* "geometryfunc/geometryfunctions.pyx":141
+ * 	y2=line[1][1]
+ * 	x3=point[0]
+ * 	y3=point[1]             # <<<<<<<<<<<<<<
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+ * 	if u<0.0001 or u>1:
+ */
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_point, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_y3 = __pyx_t_3;
+
+  /* "geometryfunc/geometryfunctions.pyx":142
+ * 	x3=point[0]
+ * 	y3=point[1]
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))             # <<<<<<<<<<<<<<
+ * 	if u<0.0001 or u>1:
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):
+ */
+  __pyx_t_3 = (((__pyx_v_x3 - __pyx_v_x1) * (__pyx_v_x2 - __pyx_v_x1)) + ((__pyx_v_y3 - __pyx_v_y1) * (__pyx_v_y2 - __pyx_v_y1)));
+  __pyx_t_4 = (pow((__pyx_v_x2 - __pyx_v_x1), 2.0) + pow((__pyx_v_y2 - __pyx_v_y1), 2.0));
+  if (unlikely(__pyx_t_4 == 0)) {
+    PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+    __PYX_ERR(0, 142, __pyx_L1_error)
+  }
+  __pyx_v_u = (__pyx_t_3 / __pyx_t_4);
+
+  /* "geometryfunc/geometryfunctions.pyx":143
+ * 	y3=point[1]
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+ * 	if u<0.0001 or u>1:             # <<<<<<<<<<<<<<
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):
+ * 			ix=x1
+ */
+  __pyx_t_6 = ((__pyx_v_u < 0.0001) != 0);
+  if (!__pyx_t_6) {
+  } else {
+    __pyx_t_5 = __pyx_t_6;
+    goto __pyx_L4_bool_binop_done;
+  }
+  __pyx_t_6 = ((__pyx_v_u > 1.0) != 0);
+  __pyx_t_5 = __pyx_t_6;
+  __pyx_L4_bool_binop_done:;
+  if (__pyx_t_5) {
+
+    /* "geometryfunc/geometryfunctions.pyx":144
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+ * 	if u<0.0001 or u>1:
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):             # <<<<<<<<<<<<<<
+ * 			ix=x1
+ * 			iy=y1
+ */
+    __pyx_t_5 = (((pow((__pyx_v_x3 - __pyx_v_x1), 2.0) + pow((__pyx_v_y3 - __pyx_v_y1), 2.0)) < (pow((__pyx_v_x3 - __pyx_v_x2), 2.0) + pow((__pyx_v_y3 - __pyx_v_y2), 2.0))) != 0);
+    if (__pyx_t_5) {
+
+      /* "geometryfunc/geometryfunctions.pyx":145
+ * 	if u<0.0001 or u>1:
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):
+ * 			ix=x1             # <<<<<<<<<<<<<<
+ * 			iy=y1
+ * 		else:
+ */
+      __pyx_v_ix = __pyx_v_x1;
+
+      /* "geometryfunc/geometryfunctions.pyx":146
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):
+ * 			ix=x1
+ * 			iy=y1             # <<<<<<<<<<<<<<
+ * 		else:
+ * 			ix=x2
+ */
+      __pyx_v_iy = __pyx_v_y1;
+
+      /* "geometryfunc/geometryfunctions.pyx":144
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+ * 	if u<0.0001 or u>1:
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):             # <<<<<<<<<<<<<<
+ * 			ix=x1
+ * 			iy=y1
+ */
+      goto __pyx_L6;
+    }
+
+    /* "geometryfunc/geometryfunctions.pyx":148
+ * 			iy=y1
+ * 		else:
+ * 			ix=x2             # <<<<<<<<<<<<<<
+ * 			iy=y2
+ * 	else:
+ */
+    /*else*/ {
+      __pyx_v_ix = __pyx_v_x2;
+
+      /* "geometryfunc/geometryfunctions.pyx":149
+ * 		else:
+ * 			ix=x2
+ * 			iy=y2             # <<<<<<<<<<<<<<
+ * 	else:
+ * 		ix = x1 + u * (x2 - x1)
+ */
+      __pyx_v_iy = __pyx_v_y2;
+    }
+    __pyx_L6:;
+
+    /* "geometryfunc/geometryfunctions.pyx":143
+ * 	y3=point[1]
+ * 	u=(((x3-x1)*(x2-x1))+((y3-y1)*(y2-y1)))/(((x2-x1)**2)+((y2-y1)**2))
+ * 	if u<0.0001 or u>1:             # <<<<<<<<<<<<<<
+ * 		if ((x3-x1)**2)+((y3-y1)**2)<((x3-x2)**2)+((y3-y2)**2):
+ * 			ix=x1
+ */
+    goto __pyx_L3;
+  }
+
+  /* "geometryfunc/geometryfunctions.pyx":151
+ * 			iy=y2
+ * 	else:
+ * 		ix = x1 + u * (x2 - x1)             # <<<<<<<<<<<<<<
+ * 		iy = y1 + u * (y2 - y1)
+ * 	d=((ix-x3)**2)+((iy-y3)**2)
+ */
+  /*else*/ {
+    __pyx_v_ix = (__pyx_v_x1 + (__pyx_v_u * (__pyx_v_x2 - __pyx_v_x1)));
+
+    /* "geometryfunc/geometryfunctions.pyx":152
+ * 	else:
+ * 		ix = x1 + u * (x2 - x1)
+ * 		iy = y1 + u * (y2 - y1)             # <<<<<<<<<<<<<<
+ * 	d=((ix-x3)**2)+((iy-y3)**2)
+ * 	return (ix,iy),d
+ */
+    __pyx_v_iy = (__pyx_v_y1 + (__pyx_v_u * (__pyx_v_y2 - __pyx_v_y1)));
+  }
+  __pyx_L3:;
+
+  /* "geometryfunc/geometryfunctions.pyx":153
+ * 		ix = x1 + u * (x2 - x1)
+ * 		iy = y1 + u * (y2 - y1)
+ * 	d=((ix-x3)**2)+((iy-y3)**2)             # <<<<<<<<<<<<<<
+ * 	return (ix,iy),d
+ */
+  __pyx_v_d = (pow((__pyx_v_ix - __pyx_v_x3), 2.0) + pow((__pyx_v_iy - __pyx_v_y3), 2.0));
+
+  /* "geometryfunc/geometryfunctions.pyx":154
+ * 		iy = y1 + u * (y2 - y1)
+ * 	d=((ix-x3)**2)+((iy-y3)**2)
+ * 	return (ix,iy),d             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_ix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_iy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_2);
+  __pyx_t_1 = 0;
+  __pyx_t_2 = 0;
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_7);
+  PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
+  __pyx_t_7 = 0;
+  __pyx_t_2 = 0;
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "geometryfunc/geometryfunctions.pyx":134
+ * 	return False
+ * 
+ * def pointlinedistance(line,point):             # <<<<<<<<<<<<<<
+ * 	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
+ * 	x1=line[0][0]
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_AddTraceback("geometryfunc.geometryfunctions.pointlinedistance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -5242,6 +5670,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_closething, __pyx_k_closething, sizeof(__pyx_k_closething), 0, 0, 1, 1},
   {&__pyx_n_s_cos, __pyx_k_cos, sizeof(__pyx_k_cos), 0, 0, 1, 1},
+  {&__pyx_n_s_d, __pyx_k_d, sizeof(__pyx_k_d), 0, 0, 1, 1},
   {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
   {&__pyx_n_s_dist, __pyx_k_dist, sizeof(__pyx_k_dist), 0, 0, 1, 1},
   {&__pyx_n_s_e2, __pyx_k_e2, sizeof(__pyx_k_e2), 0, 0, 1, 1},
@@ -5250,10 +5679,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_geometryfunc_geometryfunctions, __pyx_k_geometryfunc_geometryfunctions, sizeof(__pyx_k_geometryfunc_geometryfunctions), 0, 0, 1, 1},
   {&__pyx_kp_s_geometryfunctions_pyx, __pyx_k_geometryfunctions_pyx, sizeof(__pyx_k_geometryfunctions_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
+  {&__pyx_n_s_ix, __pyx_k_ix, sizeof(__pyx_k_ix), 0, 0, 1, 1},
+  {&__pyx_n_s_iy, __pyx_k_iy, sizeof(__pyx_k_iy), 0, 0, 1, 1},
   {&__pyx_n_s_lat, __pyx_k_lat, sizeof(__pyx_k_lat), 0, 0, 1, 1},
   {&__pyx_n_s_lat0, __pyx_k_lat0, sizeof(__pyx_k_lat0), 0, 0, 1, 1},
   {&__pyx_n_s_lat_1, __pyx_k_lat_1, sizeof(__pyx_k_lat_1), 0, 0, 1, 1},
   {&__pyx_n_s_latold, __pyx_k_latold, sizeof(__pyx_k_latold), 0, 0, 1, 1},
+  {&__pyx_n_s_line, __pyx_k_line, sizeof(__pyx_k_line), 0, 0, 1, 1},
   {&__pyx_n_s_lon, __pyx_k_lon, sizeof(__pyx_k_lon), 0, 0, 1, 1},
   {&__pyx_n_s_lon0, __pyx_k_lon0, sizeof(__pyx_k_lon0), 0, 0, 1, 1},
   {&__pyx_n_s_lon_1, __pyx_k_lon_1, sizeof(__pyx_k_lon_1), 0, 0, 1, 1},
@@ -5266,6 +5698,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_p, __pyx_k_p, sizeof(__pyx_k_p), 0, 0, 1, 1},
   {&__pyx_n_s_pi, __pyx_k_pi, sizeof(__pyx_k_pi), 0, 0, 1, 1},
   {&__pyx_n_s_point, __pyx_k_point, sizeof(__pyx_k_point), 0, 0, 1, 1},
+  {&__pyx_n_s_pointlinedistance, __pyx_k_pointlinedistance, sizeof(__pyx_k_pointlinedistance), 0, 0, 1, 1},
   {&__pyx_n_s_r, __pyx_k_r, sizeof(__pyx_k_r), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_res, __pyx_k_res, sizeof(__pyx_k_res), 0, 0, 1, 1},
@@ -5284,11 +5717,18 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_tx, __pyx_k_tx, sizeof(__pyx_k_tx), 0, 0, 1, 1},
   {&__pyx_n_s_ty, __pyx_k_ty, sizeof(__pyx_k_ty), 0, 0, 1, 1},
   {&__pyx_n_s_tz, __pyx_k_tz, sizeof(__pyx_k_tz), 0, 0, 1, 1},
+  {&__pyx_n_s_u, __pyx_k_u, sizeof(__pyx_k_u), 0, 0, 1, 1},
   {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
+  {&__pyx_n_s_x1, __pyx_k_x1, sizeof(__pyx_k_x1), 0, 0, 1, 1},
+  {&__pyx_n_s_x2, __pyx_k_x2, sizeof(__pyx_k_x2), 0, 0, 1, 1},
+  {&__pyx_n_s_x3, __pyx_k_x3, sizeof(__pyx_k_x3), 0, 0, 1, 1},
   {&__pyx_n_s_x_1, __pyx_k_x_1, sizeof(__pyx_k_x_1), 0, 0, 1, 1},
   {&__pyx_n_s_x_2, __pyx_k_x_2, sizeof(__pyx_k_x_2), 0, 0, 1, 1},
   {&__pyx_n_s_xrange, __pyx_k_xrange, sizeof(__pyx_k_xrange), 0, 0, 1, 1},
   {&__pyx_n_s_y, __pyx_k_y, sizeof(__pyx_k_y), 0, 0, 1, 1},
+  {&__pyx_n_s_y1, __pyx_k_y1, sizeof(__pyx_k_y1), 0, 0, 1, 1},
+  {&__pyx_n_s_y2, __pyx_k_y2, sizeof(__pyx_k_y2), 0, 0, 1, 1},
+  {&__pyx_n_s_y3, __pyx_k_y3, sizeof(__pyx_k_y3), 0, 0, 1, 1},
   {&__pyx_n_s_y_1, __pyx_k_y_1, sizeof(__pyx_k_y_1), 0, 0, 1, 1},
   {&__pyx_n_s_y_2, __pyx_k_y_2, sizeof(__pyx_k_y_2), 0, 0, 1, 1},
   {&__pyx_n_s_z_1, __pyx_k_z_1, sizeof(__pyx_k_z_1), 0, 0, 1, 1},
@@ -5296,11 +5736,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_min = __Pyx_GetBuiltinName(__pyx_n_s_min); if (!__pyx_builtin_min) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_builtin_min = __Pyx_GetBuiltinName(__pyx_n_s_min); if (!__pyx_builtin_min) __PYX_ERR(0, 127, __pyx_L1_error)
   #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 127, __pyx_L1_error)
   #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 127, __pyx_L1_error)
   #endif
   return 0;
   __pyx_L1_error:;
@@ -5358,6 +5798,18 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
   __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_geometryfunctions_pyx, __pyx_n_s_closething, 119, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 119, __pyx_L1_error)
+
+  /* "geometryfunc/geometryfunctions.pyx":134
+ * 	return False
+ * 
+ * def pointlinedistance(line,point):             # <<<<<<<<<<<<<<
+ * 	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
+ * 	x1=line[0][0]
+ */
+  __pyx_tuple__9 = PyTuple_Pack(12, __pyx_n_s_line, __pyx_n_s_point, __pyx_n_s_x1, __pyx_n_s_y1, __pyx_n_s_x2, __pyx_n_s_y2, __pyx_n_s_x3, __pyx_n_s_y3, __pyx_n_s_u, __pyx_n_s_ix, __pyx_n_s_iy, __pyx_n_s_d); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__9);
+  __Pyx_GIVEREF(__pyx_tuple__9);
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_geometryfunctions_pyx, __pyx_n_s_pointlinedistance, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5380,10 +5832,10 @@ static int __Pyx_InitGlobals(void) {
   __pyx_int_49 = PyInt_FromLong(49); if (unlikely(!__pyx_int_49)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_58 = PyInt_FromLong(58); if (unlikely(!__pyx_int_58)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_61 = PyInt_FromLong(61); if (unlikely(!__pyx_int_61)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_100 = PyInt_FromLong(100); if (unlikely(!__pyx_int_100)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_120 = PyInt_FromLong(120); if (unlikely(!__pyx_int_120)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_180 = PyInt_FromLong(180); if (unlikely(!__pyx_int_180)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_720 = PyInt_FromLong(720); if (unlikely(!__pyx_int_720)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_2000 = PyInt_FromLong(2000); if (unlikely(!__pyx_int_2000)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_neg_2 = PyInt_FromLong(-2); if (unlikely(!__pyx_int_neg_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -5728,6 +6180,18 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12geometryfunc_17geometryfunctions_7closething, NULL, __pyx_n_s_geometryfunc_geometryfunctions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 119, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_closething, __pyx_t_2) < 0) __PYX_ERR(0, 119, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "geometryfunc/geometryfunctions.pyx":134
+ * 	return False
+ * 
+ * def pointlinedistance(line,point):             # <<<<<<<<<<<<<<
+ * 	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
+ * 	x1=line[0][0]
+ */
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12geometryfunc_17geometryfunctions_9pointlinedistance, NULL, __pyx_n_s_geometryfunc_geometryfunctions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pointlinedistance, __pyx_t_2) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "geometryfunc/geometryfunctions.pyx":1

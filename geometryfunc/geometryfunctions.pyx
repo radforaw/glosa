@@ -122,15 +122,17 @@ def closething(point,double ang,data):
 	ang = 0-360 heading
 	data = list of points showing the line that is being compared.
 	'''
-	res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])
-	if res[0]<2000 and res[1]<len(data): #close but not last point
+	#res=min([[((point[0]-data[n][0])**2)+((point[1]-data[n][1])**2),n] for n in xrange(len(data)-1)])
+	
+	res=min([[pointlinedistance((data[0],data[1]), point)[1],n] for n in xrange(len(data)-1)])
+	if res[0]<100 and res[1]<len(data): #close but not last point
 		aa=angle(data[res[1]],data[res[1]+1])
 		if 180-abs(abs(ang-aa)-180)<45: # within 90 degrees of expected
 			return True
 	return False
 
 def pointlinedistance(line,point):
-Cdef double x1,y1,x2,y2,x3,y3,u
+	cdef double x1,y1,x2,y2,x3,y3,u,ix,iy,d
 	x1=line[0][0]
 	y1=line[0][1]
 	x2=line[1][0]

@@ -76,9 +76,12 @@ def routecalc(filename='route.py',dist=10):
 	result=plinesplit(points,dist)
 	return result
 	
-
-	
-	
+def simpleline(filename='route.py'):
+	points=[]
+	with open(filename,'r') as file:
+		for line in file.readlines():
+			points.append([float(line.rstrip().split(' ')[0]),float(line.rstrip().split(' ')[1])])
+	return points
 	
 '''
 

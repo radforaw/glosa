@@ -77,6 +77,8 @@ def csvimporter(filename='files/GLOSA2.csv'):
 	print csvfile[:200]
 	p=Pool(4)
 	d=[a for a in p.map(impfunc,[n for n in csv.DictReader(io.StringIO(csvfile.decode("utf-8-sig")))])]
+	p.close()
+	p.join()
 	v=defaultdict(list)
 	for n in d:
 		v[n[0]].append(n[1])
@@ -95,9 +97,13 @@ def journeysort(v,routes): #inbound,outbound):
 	for n in v: # n is the driver
 		a=sorted(v[n])
 		last=(a[0][1],a[0][2])
-		old=angle(last,(a[1][1],a[1][2]))
+		print len(a),n,
+		try:
+			old=angle(last,(a[1][1],a[1][2]))
+		except:
+			continue
 		prev=a[0][0]-62
-		print 'this',n,last,old,prev
+		print last,old,prev
 		for t in range(len(routes)): # sets up a list for each driver by direction ready for GPS points...
 			endresult[t][n]=[]
 		for result in a:
@@ -118,6 +124,16 @@ def journeysort(v,routes): #inbound,outbound):
 			last=(result[1],result[2])
 			prev=result[0]
 	return endresult
+
+def journeysort(v,routes): #inbound,outbound):
+	'''
+	take the processed journey dictionary, and return just journeys that are on the selected route / routes
+	v is the dictionary of processed GPS points
+	inbound / outbound are lists of points representing the inbound / outbound journeys to be compared
+	'''
+	p=Pool(4)
+	d=[j for j in p.map(addfunc,[(v[n],n,routes) for n in v])] # n is the driver
+	return d
 
 def createjourneys(journeylist):
 	'''

@@ -18,7 +18,7 @@ def WGS84toOSGB36(double lat, double lon):
 	
 	# Want to convert to the Airy 1830 ellipsoid, which has the following:
 	# The GSR80 semi-major and semi-minor axes used for WGS84(m)
-cdef double a_1,b_1,e2_1,nu_1,H,x_1,y_1,z_1,s
+	cdef double a_1,b_1,e2_1,nu_1,H,x_1,y_1,z_1,s
 
 	a_1, b_1 = 6378137.000, 6356752.3141
 	e2_1 = 1 - (b_1*b_1)/(a_1*a_1)  # The eccentricity of the GRS80 ellipsoid
@@ -33,11 +33,14 @@ cdef double a_1,b_1,e2_1,nu_1,H,x_1,y_1,z_1,s
 	# Perform Helmut transform (to go between GRS80 (_1) and Airy 1830 (_2))
 	s = 20.4894*10**-6  # The scale factor -1
 	# The translations along x,y,z axes respectively
-	cdef double tx, ty, tz = -446.448, 125.157, -542.060
+	cdef double tx, ty, tz 
+	tx,ty,tz= -446.448, 125.157, -542.060
 	# The rotations along x,y,z respectively, in seconds
-	cdef double rxs, rys, rzs = -0.1502, -0.2470, -0.8421
+	cdef double rxs, rys, rzs
+	rxs,rys,rzs = -0.1502, -0.2470, -0.8421
 	# In radians
-	cdef double rx, ry, rz = rxs*pi/(180*3600.), rys*pi/(180*3600.), rzs*pi/(180*3600.)
+	cdef double rx, ry, rz
+	rx,ry,rz = rxs*pi/(180*3600.), rys*pi/(180*3600.), rzs*pi/(180*3600.)
 	cdef double x_2 = tx + (1+s)*x_1 + (-rz)*y_1 + (ry)*z_1
 	cdef double y_2 = ty + (rz)*x_1 + (1+s)*y_1 + (-rx)*z_1
 	cdef double z_2 = tz + (-ry)*x_1 + (rx)*y_1 + (1+s)*z_1
@@ -45,7 +48,8 @@ cdef double a_1,b_1,e2_1,nu_1,H,x_1,y_1,z_1,s
 	# Back to spherical polar coordinates from cartesian
 	# Need some of the characteristics of the new ellipsoid
 	# The GSR80 semi-major and semi-minor axes used for WGS84(m)
-	cdef double a, b = 6377563.396, 6356256.909
+	cdef double a, b 
+	a,b= 6377563.396, 6356256.909
 	cdef double e2 = 1 - (b*b)/(a*a)  # The eccentricity of the Airy 1830 ellipsoid
 	cdef double p = sqrt(x_2**2 + y_2**2)
 	
@@ -65,7 +69,8 @@ cdef double a_1,b_1,e2_1,nu_1,H,x_1,y_1,z_1,s
 	cdef double F0 = 0.9996012717  # scale factor on the central meridian
 	cdef double lat0 = 49*pi/180  # Latitude of true origin (radians)
 	cdef double lon0 = -2*pi/180  # Longtitude of true origin and central meridian (radians)
-	cdef double N0, E0 = -100000, 400000  # Northing & easting of true origin (m)
+	cdef double N0, E0 
+	N0,E0= -100000, 400000  # Northing & easting of true origin (m)
 	cdef double n = (a-b)/(a+b)
 	
 	# meridional radius of curvature
@@ -96,14 +101,14 @@ cdef double a_1,b_1,e2_1,nu_1,H,x_1,y_1,z_1,s
 
 
 
-def dist( double a,  double b):
-	cdef float x,y
+def dist( a, b):
+	cdef double x,y
 	x=a[0]-b[0]
 	y=a[1]-b[1]
 	return sqrt(x*x+y*y)
 
-def angle(double a,double b):
-	cdef float x,y,r
+def angle( a, b):
+	cdef double x,y,r
 	x=b[0]-a[0]
 	y=b[1]-a[1]
 	r=atan2(x,y)*(180/pi)

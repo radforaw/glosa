@@ -13,8 +13,9 @@ from multiprocessing import Pool
 from multiimport import *
 from collections import defaultdict
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
+import codecs
 
 from geometryfunc import *
 import linestuff
@@ -27,18 +28,19 @@ def csvimporter(filename='files/GLOSA2.csv'):
 	'''
 	with zipfile.ZipFile(filename,'r') as zfile:
 		unzipped= zfile.namelist()[0]
-		result=u"VehicleId,createdAt,Longitude,Latitude,DeviceTime,TimeOffset,IntersectionId,Event,Distance,RouteId,Speed,CalculationAdvisory,SPAT,Heading,MAP,Lane,AdvisoryEnabled\n"
+		
+		
+		#result=u"VehicleId,createdAt,Longitude,Latitude,DeviceTime,TimeOffset,IntersectionId,Event,Distance,RouteId,Speed,CalculationAdvisory,SPAT,Heading,MAP,Lane,AdvisoryEnabled\n"
+		result=zfile.read(unzipped).encode("utf-8-sig")
+		result=result.encode("ascii","ignore")
+		#result=zfile.read(unzipped).encode("utf-8-sig")
+	print result[:400]
 
-		result+=zfile.read(unzipped).encode("utf-8-sig")
-	print result[:200]
-	#with io.open(result, "r", encoding="utf-8-sig") as csvfile:
-	csvfile=result.encode("utf-8-sig")
-	del result
-	print csvfile[:200]
 	p=Pool(4)
-	d=[a for a in p.map(impfunc,[n for n in csv.DictReader(io.StringIO(csvfile.decode("utf-8-sig")))])]
+	d=[a for a in p.map(impfunc,[n for n in csv.DictReader(result.splitlines())])]
 	p.close()
 	p.join()
+
 	v=defaultdict(list)
 	for n in d:
 		v[n[0]].append(n[1])
@@ -97,5 +99,6 @@ def createjourneys(journeylist):
 #inbound=linestuff.routecalc("data/routeback.csv",10)
 routes={"Outbound":linestuff.simpleline("data/route.csv"),"Inbound":linestuff.simpleline("data/routeback.csv")}
 
-j=csvimporter('data/GLOSA_Production_Eventlog_Export_201808031504.csv.zip.py')
+j=csvimporter('data/GLOSA_Production_Eventlog_Export_20190218.csv.zip')
 tmp=journeysort(j,routes)
+

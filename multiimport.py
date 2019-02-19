@@ -9,6 +9,7 @@ sys.setdefaultencoding('utf-8')
 from geometryfunc import *
 
 def impfunc(n):
+
 	tmp=n['createdAt'][:-7] #Datetimes are in a funny format - this is a cludge to make it work
 	t=datetime.datetime.strptime(tmp,'%Y-%m-%d %H:%M:%S.%f')
 	l=WGS84toOSGB36(float(n['Latitude']),float(n['Longitude']))
@@ -27,6 +28,7 @@ def impfunc(n):
 	else:
 		s1="Grey"
 		s2=-1
+	print [tn,[t,l[0],l[1],n['Speed'],n['CalculationAdvisory'],s1,s2]]
 	return [tn,[t,l[0],l[1],n['Speed'],n['CalculationAdvisory'],s1,s2]]
 
 def addfunc(f):

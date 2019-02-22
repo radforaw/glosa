@@ -29,7 +29,10 @@ def impfunc(n):
 		s1="Grey"
 		s2=-1
 	print [tn,[t,l[0],l[1],n['Speed'],n['CalculationAdvisory'],s1,s2]]
-	return [tn,[t,l[0],l[1],n['Speed'],n['CalculationAdvisory'],s1,s2]]
+	return [tn,[t,l[0],l[1],n['Speed'],n['CalculationAdvisory'],s1,s2]] # 0:time, 1:easting, 2:northing, 3:speed, 4:calc advisory, 5:light colour, 6:seconds until
+
+
+
 
 def addfunc(f):
 	a=f[0]
@@ -37,13 +40,13 @@ def addfunc(f):
 	routes=f[2]
 	endresult={}
 	for b in routes:
-		endresult[b]={driver:[]}     # creates a dictionary for each direction (or route)
+		endresult[b]={driver:[]}    # creates a dictionary for each direction (or route)
 	a=sorted(a)
 
 	last=(a[0][1],a[0][2])
 	old=angle(last,(a[1][1],a[1][2]))
 	prev=a[0][0]-62
-	print len(a),driver, last,old,prev
+	#print len(a),driver, last,old,prev
 	'''for t in range(len(routes)): # sets up a list for each driver by direction ready for GPS points...
 		endresult[t][n]=[]
 	'''
@@ -54,7 +57,8 @@ def addfunc(f):
 			fin=angle(last,(result[1],result[2]))
 		for route in routes:		
 			if closething((result[1],result[2]),fin,routes[route]):
-				endresult[route][driver].append([fin,dist(last,(result[1],result[2])), result[3],result[0]-prev,result[1],result[2],result[0],result[5],result[6]])
+				endresult[route][driver].append([fin,dist(last,(result[1],result[2])), float(result[3]),int(result[0]-prev),result[1],result[2],result[0],result[5],result[6]]) 
+						
 		old=fin
 		last=(result[1],result[2])
 		prev=result[0]
